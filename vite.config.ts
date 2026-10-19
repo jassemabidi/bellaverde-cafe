@@ -8,9 +8,11 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
-    server: { entry: "server" },
+  server: { entry: "server" },
+  prerender: {
+    enabled: true,
+    crawlLinks: true,
+  },
   },
   vite: {
     // Pre-bundle icons up front so a mid-session re-optimization can't load a second React copy.
