@@ -1,16 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Star, Leaf, Coffee, Flower2, Instagram } from "lucide-react";
 
-import interior from "@/assets/bella-verde-interior.jpg.asset.json";
-import logo from "@/assets/bella-verde-logo.jpg.asset.json";
+
+
 import mojitosImg from "@/assets/menu-mojitos.jpg";
 import dessertsImg from "@/assets/menu-desserts.jpg";
 import juicesImg from "@/assets/menu-juices.jpg";
 import { site } from "@/lib/site-info";
-import salleArches from "@/assets/bella-verde-salle-arches.jpg.asset.json";
-import salleFleurs from "@/assets/bella-verde-salle-fleurs.jpg.asset.json";
-import pistache from "@/assets/bella-verde-pistache-shake.jpg.asset.json";
-import promo from "@/assets/bella-verde-promo-mojito.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -49,7 +45,7 @@ function Index() {
       {/* Hero */}
       <section className="relative isolate min-h-[88vh] overflow-hidden">
         <img
-          src={interior.url}
+          src={$bella-verde-interior.jpg}
           alt="La salle de Bella Verde avec son plafond végétal et son arche fleurie"
           className="absolute inset-0 -z-10 h-full w-full object-cover"
         />
@@ -84,7 +80,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 py-24 md:grid-cols-2">
           <div className="mx-auto w-full max-w-sm">
             <img
-              src={logo.url}
+              src={$bella-verde-logo.jpg}
               alt="Logo Bella Verde salon de thé"
               loading="lazy"
               className="aspect-square w-full rounded-full object-cover shadow-soft ring-gold"
@@ -123,7 +119,7 @@ function Index() {
       <section className="bg-forest text-forest-foreground">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-2">
           <img
-            src={promo.url}
+            src={$bella-verde-promo-mojito.jpg}
             alt="Affiche Bella Verde : -10% sur ta commande, poste une story et tague-nous"
             loading="lazy"
             className="mx-auto w-full max-w-md rounded-2xl shadow-soft"
@@ -197,19 +193,19 @@ function Index() {
         </div>
         <div className="mt-14 grid gap-5 md:grid-cols-3 md:grid-rows-[320px_320px]">
           <img
-            src={salleArches.url}
+            src={$bella-verde-salle-arches.jpg}
             alt="Banquette verte et arches fleuries sous le plafond végétal"
             loading="lazy"
             className="h-72 w-full rounded-2xl object-cover shadow-soft md:col-span-2 md:h-full"
           />
           <img
-            src={pistache.url}
+            src={$bella-verde-pistache-shake.jpg}
             alt="Milkshake à la pistache devant un mur de fleurs"
             loading="lazy"
             className="h-96 w-full rounded-2xl object-cover shadow-soft md:row-span-2 md:h-full"
           />
           <img
-            src={salleFleurs.url}
+            src={$bella-verde-salle-fleurs.jpg}
             alt="La salle avec ses fauteuils et l'arche de bougainvilliers"
             loading="lazy"
             className="h-72 w-full rounded-2xl object-cover shadow-soft md:h-full"
