@@ -15,7 +15,7 @@ export default defineConfig({
   },
   },
   vite: {
-    // Pre-bundle icons up front so a mid-session re-optimization can't load a second React copy.
-    optimizeDeps: { include: ["lucide-react"] },
+  base: "/bellaverde-cafe/",
+  optimizeDeps: { include: ["lucide-react"] },
   },
 });
