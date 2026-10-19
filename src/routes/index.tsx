@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Star, Leaf, Coffee, Flower2 } from "lucide-react";
+import { Star, Leaf, Coffee, Flower2, Instagram } from "lucide-react";
 
 import interior from "@/assets/bella-verde-interior.jpg.asset.json";
 import logo from "@/assets/bella-verde-logo.jpg.asset.json";
@@ -7,6 +7,10 @@ import mojitosImg from "@/assets/menu-mojitos.jpg";
 import dessertsImg from "@/assets/menu-desserts.jpg";
 import juicesImg from "@/assets/menu-juices.jpg";
 import { site } from "@/lib/site-info";
+import salleArches from "@/assets/bella-verde-salle-arches.jpg.asset.json";
+import salleFleurs from "@/assets/bella-verde-salle-fleurs.jpg.asset.json";
+import pistache from "@/assets/bella-verde-pistache-shake.jpg.asset.json";
+import promo from "@/assets/bella-verde-promo-mojito.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -115,6 +119,36 @@ function Index() {
         </div>
       </section>
 
+      {/* Promo */}
+      <section className="bg-forest text-forest-foreground">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-2">
+          <img
+            src={promo.url}
+            alt="Affiche Bella Verde : -10% sur ta commande, poste une story et tague-nous"
+            loading="lazy"
+            className="mx-auto w-full max-w-md rounded-2xl shadow-soft"
+          />
+          <div className="text-center md:text-left">
+            <p className="eyebrow text-gold-soft">Offre Instagram</p>
+            <p className="mt-4 font-display text-8xl leading-none text-gold-soft nums-lining">-10%</p>
+            <p className="font-script text-4xl">sur ta commande</p>
+            <div className="gold-rule my-8 w-32 md:mx-0 mx-auto" />
+            <p className="text-lg leading-relaxed opacity-85">
+              Poste une story chez Bella Verde et tague-nous sur Instagram : on t'offre 10% sur ta
+              commande.
+            </p>
+            <a
+              href={site.instagram}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-sm tracking-[0.2em] uppercase text-forest transition-colors hover:bg-gold-soft"
+            >
+              <Instagram className="h-4 w-4" /> @bellaverde__
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Highlights */}
       <section className="mx-auto max-w-6xl px-5 py-24">
         <div className="text-center">
@@ -152,6 +186,40 @@ function Index() {
           >
             Toute la carte
           </Link>
+        </div>
+      </section>
+
+      {/* Gallery */}
+      <section className="mx-auto max-w-6xl px-5 pb-24">
+        <div className="text-center">
+          <p className="eyebrow">Le salon</p>
+          <h2 className="mt-3 text-4xl md:text-5xl">Un décor à partager</h2>
+        </div>
+        <div className="mt-14 grid gap-5 md:grid-cols-3 md:grid-rows-2">
+          <img
+            src={salleArches.url}
+            alt="Banquette verte et arches fleuries sous le plafond végétal"
+            loading="lazy"
+            className="h-72 w-full rounded-2xl object-cover shadow-soft md:col-span-2 md:h-full"
+          />
+          <img
+            src={pistache.url}
+            alt="Milkshake à la pistache devant un mur de fleurs"
+            loading="lazy"
+            className="h-96 w-full rounded-2xl object-cover shadow-soft md:row-span-2 md:h-[640px]"
+          />
+          <img
+            src={salleFleurs.url}
+            alt="La salle avec ses fauteuils et l'arche de bougainvilliers"
+            loading="lazy"
+            className="h-72 w-full rounded-2xl object-cover shadow-soft md:h-full"
+          />
+          <img
+            src={interior.url}
+            alt="Suspensions en rotin et fougères au plafond"
+            loading="lazy"
+            className="h-72 w-full rounded-2xl object-cover shadow-soft md:h-full"
+          />
         </div>
       </section>
 
