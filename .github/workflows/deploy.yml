@@ -1,4 +1,3 @@
-
 name: Deploy Bella Verde Cafe
 
 on:
@@ -31,6 +30,19 @@ jobs:
 
       - name: Build website
         run: bun run build
+
+      - name: Inspect build output
+        run: |
+          echo "=== Root ==="
+          ls -la
+          echo "=== dist ==="
+          ls -la dist || true
+          echo "=== dist/client ==="
+          ls -la dist/client || true
+          echo "=== .output/public ==="
+          ls -la .output/public || true
+          echo "=== index.html files ==="
+          find . -path './node_modules' -prune -o -name index.html -type f -print | head -50
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
