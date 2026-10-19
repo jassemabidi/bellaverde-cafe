@@ -195,7 +195,7 @@ function Index() {
           <p className="eyebrow">Le salon</p>
           <h2 className="mt-3 text-4xl md:text-5xl">Un décor à partager</h2>
         </div>
-        <div className="mt-14 grid gap-5 md:grid-cols-3 md:grid-rows-2">
+        <div className="mt-14 grid gap-5 md:grid-cols-3 md:grid-rows-[320px_320px]">
           <img
             src={salleArches.url}
             alt="Banquette verte et arches fleuries sous le plafond végétal"
@@ -206,7 +206,7 @@ function Index() {
             src={pistache.url}
             alt="Milkshake à la pistache devant un mur de fleurs"
             loading="lazy"
-            className="h-96 w-full rounded-2xl object-cover shadow-soft md:row-span-2 md:h-[640px]"
+            className="h-96 w-full rounded-2xl object-cover shadow-soft md:row-span-2 md:h-full"
           />
           <img
             src={salleFleurs.url}
