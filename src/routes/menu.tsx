@@ -77,7 +77,7 @@ function MenuPage() {
                     <div className="flex items-baseline gap-3">
                       <h3 className="font-display text-xl font-medium md:text-2xl">{item.name}</h3>
                       <span className="leader-dots" aria-hidden />
-                      <span className="font-display text-xl whitespace-nowrap text-primary">
+                      <span className="font-display nums-lining text-xl whitespace-nowrap text-primary">
                         {formatPrice(item.price)}
                       </span>
                     </div>
