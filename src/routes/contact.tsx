@@ -67,6 +67,19 @@ function ContactPage() {
 
           <div className="gold-rule my-8" />
 
+          <p className="eyebrow">Horaires de la semaine</p>
+          <ul className="mt-4 space-y-2">
+            {site.weeklyHours.map((h) => (
+              <li key={h.day} className="flex items-baseline gap-3">
+                <span className="font-display text-lg">{h.day}</span>
+                <span className="leader-dots" aria-hidden />
+                <span className="nums-lining text-sm text-primary">{h.time}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="gold-rule my-8" />
+
           <p className="eyebrow">Réseaux</p>
           <div className="mt-4 flex gap-3">
             <a
