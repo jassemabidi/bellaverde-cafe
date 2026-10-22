@@ -45,7 +45,7 @@ function Index() {
       {/* Hero */}
       <section className="relative isolate min-h-[88vh] overflow-hidden">
         <img
-          src={`${import.meta.env.BASE_URL}bella-verde-interior.jpg}
+          src={`${import.meta.env.BASE_URL}bella-verde-interior.jpg`}
           alt="La salle de Bella Verde avec son plafond végétal et son arche fleurie"
           className="absolute inset-0 -z-10 h-full w-full object-cover"
         />
@@ -211,7 +211,7 @@ function Index() {
             className="h-72 w-full rounded-2xl object-cover shadow-soft md:h-full"
           />
           <img
-            src={interior.url}
+            src={`${import.meta.env.BASE_URL}bella-verde-interior.jpg`}
             alt="Suspensions en rotin et fougères au plafond"
             loading="lazy"
             className="h-72 w-full rounded-2xl object-cover shadow-soft md:h-full"
