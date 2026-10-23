@@ -19,7 +19,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-5">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img
-            src={logo.url}
+            src={logo}
             alt="Logo Bella Verde"
             width={48}
             height={48}
