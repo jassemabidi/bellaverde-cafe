@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu as MenuIcon, X } from "lucide-react";
 import { useState } from "react";
 
-import logo from "@/assets/bella-verde-logo.jpg.asset.json";
+const logo = `${import.meta.env.BASE_URL}bella-verde-logo.jpg`;
 import { site } from "@/lib/site-info";
 
 const links = [
